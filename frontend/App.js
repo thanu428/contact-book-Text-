@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:3000/contacts";
+const API_URL = "https://contact-book-backend.onrender.com/contacts";
+
 
 async function addContact() {
   const name = document.getElementById('name').value;

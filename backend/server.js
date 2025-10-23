@@ -1,11 +1,15 @@
+const express = require("express");                // for server
+const { DataSource } = require("typeorm");        // for database connection
+const { ContactEntity } = require("./entities/ContactEntity"); // your table/entity
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // use Render's port
 
 app.use(cors());
 app.use(express.json());
 
+// Temporary in-memory storage for contacts
 let contacts = [];
 
 // Get all contacts
@@ -31,6 +35,7 @@ app.delete('/contacts/:index', (req, res) => {
   }
 });
 
+// Start server
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
