@@ -1,19 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Book</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Book Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Contact Book</h1>
+  <header>
+    <h1>📘 Contact Book Dashboard</h1>
+    <p>Manage your contacts efficiently</p>
+  </header>
 
-  <input type="text" id="name" placeholder="Name" />
-  <input type="text" id="phone" placeholder="Phone" />
-  <button onclick="addContact()">Add Contact</button>
+  <main class="dashboard">
+    <section class="stats">
+      <div class="stat-box">
+        <h2 id="totalContacts">0</h2>
+        <p>Total Contacts</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="recentAdded">0</h2>
+        <p>Recently Added</p>
+      </div>
+      <div class="stat-box">
+        <h2 id="deletedCount">0</h2>
+        <p>Deleted Contacts</p>
+      </div>
+    </section>
 
-  <h2>Saved Contacts</h2>
-  <ul id="contactList"></ul>
+    <section class="form-section">
+      <h2>Add New Contact</h2>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Enter full name" />
+        <input type="text" id="phone" placeholder="Enter phone number" />
+        <button onclick="addContact()">Add Contact</button>
+      </div>
+    </section>
+
+    <section class="search-section">
+      <h2>Search Contacts</h2>
+      <input type="text" id="searchInput" placeholder="Search by name or phone" onkeyup="searchContacts()" />
+    </section>
+
+    <section class="contact-list">
+      <h2>Saved Contacts</h2>
+      <ul id="contactList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Contact Book App — Built with ❤️ by Thanusha</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
