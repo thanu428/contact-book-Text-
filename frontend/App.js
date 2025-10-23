@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-const API_URL = "https://contact-book-backend.onrender.com/contacts";
 
-=======
-const API_URL = "http://localhost:3000/contacts";
+const API_URL = "https://contact-book-text.onrender.com/contacts"; // use Render backend
+
 let contacts = [];
 let deletedCount = 0;
->>>>>>> 6dab17dea73d5326f922e6a23cae0b768b0f153f
 
 // Add new contact
 async function addContact() {
@@ -77,5 +74,5 @@ function updateRecentAdded() {
   recentAdded.textContent = parseInt(recentAdded.textContent) + 1;
 }
 
+// Load contacts on page load
 loadContacts();
-
