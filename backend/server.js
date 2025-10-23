@@ -1,6 +1,4 @@
-const express = require("express");                // for server
-const { DataSource } = require("typeorm");        // for database connection
-const { ContactEntity } = require("./entities/ContactEntity"); // your table/entity
+const express = require("express");
 const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
