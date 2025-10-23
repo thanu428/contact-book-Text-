@@ -9,12 +9,6 @@ app.use(express.json());
 // Temporary in-memory storage
 let contacts = [];
 
-// Get all contacts
-app.get('/contacts', (req, res) => {
-    res.json(contacts);
-});
-
-
 // ✅ Friendly message at the base URL
 app.get('/', (req, res) => {
     res.send('Backend is running!');
@@ -46,4 +40,3 @@ app.delete('/contacts/:index', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
-
